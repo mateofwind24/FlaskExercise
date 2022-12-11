@@ -23,7 +23,12 @@ def cal2():
 
 @app.route('/img')
 def myimage():
-    return render_template("image1.html")
+    return render_template('image1.html')
+
+@app.route('/listprint')
+def listprint():
+    data = [[1,2,3],[4,5,6],[7,8,9]]
+    return render_template('listprint.html', data=data)
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', debug=True)
